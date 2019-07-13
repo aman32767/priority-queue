@@ -2,7 +2,7 @@ class binaryHeap {
   constructor() {
     this.value = [];
   }
-  insert(val, priority) {
+  enqueue(val, priority) {
     var newNode = new node(val, priority);
     this.value.push(newNode);
     var index = this.value.length - 1;
@@ -19,7 +19,7 @@ class binaryHeap {
     return this.value;
   }
 
-  extract() {
+ dequeue() {
     var max = this.value[0];
     var end = this.value.pop();
     if (this.value.length > 0) {
